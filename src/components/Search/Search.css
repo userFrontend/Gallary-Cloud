@@ -1,0 +1,53 @@
+.search-users{
+    background-color: #fff;
+    box-shadow: var(--profileShadow);
+    border-radius: 10px;
+    padding: 10px 20px;
+    height: 96vh;
+    overflow: auto;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    padding: 10px 0;
+}
+
+.search-input-box{
+    display: flex;
+}
+
+.search-input{
+    width: 100%;
+    padding: 8px 40px 8px 8px;
+    background-color: whitesmoke;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    border: 2px solid #f9532d;
+    border-style: solid none solid solid;
+}
+
+.search-input-box button {
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width: 350px) {
+
+  .search-input{
+    width: 100%;
+  }
+   
+  }
+@media (max-width: 600px) {
+
+  .search-input{
+    width: 100%;
+  }
+   
+  }

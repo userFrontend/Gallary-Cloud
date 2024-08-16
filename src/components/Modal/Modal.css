@@ -1,0 +1,29 @@
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: gray;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+.modal-body > button {
+    border: none;
+    padding: 5px 10px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    margin-bottom: auto;
+}
+
+.modal-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body form{
+    background-color: dimgray;
+}

@@ -1,0 +1,404 @@
+
+.gallary-box{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+}
+
+
+.add-photo{
+    background-color: #f9532d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.gallary-box form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.gallary-box form input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    color: white;
+}
+
+.gallary-box form button{
+    padding: 5px;
+    background: transparent;
+    border: 1px solid green;
+    color: green;
+}
+
+
+.file{
+     background: transparent;
+     backdrop-filter: blur(10px);
+     border: 1px solid gray;
+     padding: 5px;
+     border-radius: 10px;
+     width: 290px;
+     height: 350px;
+     z-index: 3;
+    }
+    
+.file-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.file-top b{
+    cursor: pointer;
+}
+    
+.file-top span{
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.file .img-box{
+    height: 80%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.file h2{
+    height: 40px;
+    text-align: center;
+    border-top: 1px solid gray;
+    overflow: auto;
+    overscroll-behavior-block: none;
+}
+
+.picture-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #f9532d;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.picture-form .input {
+    width: auto;
+}
+
+.picture-form .input{
+    cursor: pointer;
+    /* padding: 10px; */
+    width: 100%;
+}
+
+.picture-form button {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #f9532d;
+}
+
+.picture-form input, .picture-form select, .picture-form .prev {
+    outline: none;
+    border: 1px solid #f9532d;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #f9532d;
+    border-radius: 10px;
+}
+
+.picture-form .prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+@media (max-width: 500px){
+    .gallary-box{
+        justify-content: center;
+    }
+    .picture-form {
+        padding: 20px 40px;
+    }
+}
+
+
+/* Drop Add photo button */
+.add_dropdown , .add-photo{
+    position: relative;
+    width: 150px;
+    filter: url(#goo);
+    z-index: 4; 
+}
+.dropdown__face, .dropdown__items {
+    background-color: #f9532d;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+}
+.dropdown__face {
+    display: block;
+    position: relative;
+}
+.dropdown__items {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 200px;
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.dropdown__items li {
+    cursor: pointer;
+}
+.dropdown__items::before {
+    content: "";
+    background-color: #f9532d;
+    position: absolute;
+    bottom: 100%;
+    right: 20%;
+    height: 40px;
+    width: 20px;
+}
+.dropdown__arrow {
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg) translateY(-50%);
+    transform-origin: right;
+}
+.add_dropdown input {
+    display: none;
+}
+.add_dropdown input:checked ~ .dropdown__items {
+    top: calc(100% + 25px);
+    visibility: visible;
+    opacity: 1;
+}
+
+svg {
+    display: none;
+}
+
+/* Camera styles */ 
+
+.cameraApp {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 25px;
+    width: 60% ;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: ease all 0.2s;
+    cursor: grab;
+    z-index: 4;
+  }
+  
+  .cameraApp:hover:after {
+    background-color: #fff;
+  }
+  
+  .cameraApp.hidden {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    transition-duration: 0.3s;
+  }
+  
+  .cameraApp .camIco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .cameraApp .camIco svg {
+    width: 50%;
+    height: 50%;
+  }
+  
+  .cameraApp .camIco svg path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+  
+  .cameraApp .topBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 100%;
+    height:40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .cameraApp .topBar .chevronUp svg,
+  .cameraApp .topBar .flash svg,
+  .cameraApp .topBar .circles svg {
+    width: 80%;
+    height: 80%;
+  }
+  
+  .cameraApp .topBar .flash,
+  .cameraApp .topBar .circles {
+    background-color: transparent;
+  }
+  
+  .cameraApp .cameraArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 80%;
+    position: relative;
+  }
+  
+  .cameraApp .cameraArea:before,
+  .cameraApp .cameraArea:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .cameraApp .cameraArea:before {
+    width: calc(100% / 3);
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .cameraApp .cameraArea:after {
+    width: 100%;
+    height: calc(100% / 3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .cameraApp .cameraArea video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cameraApp .obturadorArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+  
+  .cameraApp .obturadorArea .imgPreview {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: gray;
+    width: 70px;
+    height: 60px;
+    border-radius: 3px;
+    border: 1px solid white;
+    overflow: hidden;
+  }
+  
+  .cameraApp .obturadorArea .obturador {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .cameraApp .obturadorArea .obturador:before {
+    content: "";
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border: 1px solid #000;
+    border-radius: 50%;
+  }
+  
+  .cameraApp .obturadorArea .camIco {
+    width: 30px;
+    height: 30px;
+  }
+
+  #canvas{
+    margin-left: -10px;
+  }
+
+  @media (max-width: 760px){
+    .cameraApp{
+        width: 100% !important;
+    }
+    }

@@ -1,0 +1,160 @@
+header{
+    position: fixed;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid gray;
+}
+
+.navbar{
+    height: 50px;
+}
+
+
+.logo{
+    cursor: pointer;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.active{
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+    filter: none !important;
+  }
+
+.nav-list{
+    gap: 10px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-link{
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: all ease 0.4s;
+    filter: blur(1px);
+}
+
+.auth{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.auth a{
+    color: white;
+    cursor: pointer;
+}
+
+.auth a:hover{
+    transform: scale(1.1);
+    color: var(--primary-color);
+    filter: none;
+}
+
+.auth .sign {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--activeColor);
+}
+
+.nav-link:hover{
+    transform: scale(1.1);
+    color: var(--primary-color);
+    filter: none;
+}
+
+.auth-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 100px;
+}
+
+.auth-content .buttons button:nth-child(1){
+    border: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    background: var(--textColor);
+    border-radius: 20px 0px 0px 20px;
+}
+.auth-content .buttons button:nth-child(2){
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.modal-auth{
+    color: var(--textColor) !important;
+}
+
+.modal-auth span {
+    color: blue;
+    text-decoration: underline;
+}
+
+.modal-auth .btn {
+    background-color: var(--textColor);
+    display: block; 
+    margin: 30px auto 0px auto;
+    width: 200px;
+    font-weight: bold;
+    color: var(--activeColor);
+}
+
+.modal-auth input{
+    padding: 10px 20px;
+    border-color: var(--textColor);
+    color: var(--textColor) !important;
+}
+
+select{
+    border-color: var(--textColor) !important;
+    outline-color: var(--textColor);
+    padding: 10px 20px !important;
+}
+.form-help{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 700px){
+    .nav-list{
+        gap: 0px;
+    }
+
+    .nav-link{
+        font-size: 10px;
+    }
+    header{
+        padding: 20px;
+    }
+
+    header .logo{
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+    .logo img{
+        width: 50px;
+        height: 50px;
+    }
+}

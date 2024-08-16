@@ -1,0 +1,36 @@
+:root{
+  --textColor: orange;
+  --activeColor: #1818be8d;
+  --primary-color: #f9532d;
+  --primary-dark: #1F252E;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #1F252E;
+  color: white;
+  -webkit-overflow-scrolling: none;
+}
+
+.container{
+  padding: 0 50px;
+}
+
+
+.full-screen {
+  width:  100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.903);
+  position: fixed;
+  object-fit: contain;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  cursor: zoom-out;
+}

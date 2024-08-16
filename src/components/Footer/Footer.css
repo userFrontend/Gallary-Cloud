@@ -1,0 +1,37 @@
+
+
+.footer-about{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.footer-img{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.footer-about .footer-img .img {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer-img .img img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}

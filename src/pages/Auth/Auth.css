@@ -1,0 +1,68 @@
+
+.form-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 30px;
+    gap: 50px;
+    color: white;
+}
+
+.form-box .logo{
+    padding: 20px 0;
+}
+
+.form-box form{
+    background: transparent;
+    border: 1px solid gray;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 50px 100px;
+    position: fixed;
+}
+
+.input-form{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.input-form input {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.form-box .or{
+    text-align: center;
+    padding: 5px;
+}
+
+.form-box .or span{
+    color: dodgerblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.form-box form button {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.image {
+    width: auto;
+}
+
+.image img{
+    width: 100%;
+    border-radius: 10px;
+}

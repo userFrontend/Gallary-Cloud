@@ -1,0 +1,81 @@
+.accout {
+    margin-top: 150px;
+}
+
+.profile-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
+.profile-box button {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    color: #f9532d;
+    width: 150px;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.profile-box img{
+    border: 2px solid #f9532d;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.del-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.del-form input{
+    outline: none;
+    border: 1px solid #f9532d;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #f9532d;
+    border-radius: 10px;
+}
+
+.del-form button {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #f9532d;
+}
+
+
+@media (max-width: 500px){
+    .profile-box{
+        text-align: center;
+        justify-content: center;
+    }
+    .profile-box img{
+        width: 350px;
+        height: 250px;
+    }
+    .edit{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .edit button{
+        width: 100px;
+    }
+}
